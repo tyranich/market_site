@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+data/*.db
+.env
+.env
+.venv/
+__pycache__/
+node_modules/
+dist/
+*.db
