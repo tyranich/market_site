@@ -20,7 +20,8 @@ services:
       DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/finchoice
       DEBUG: "false"
     expose:
-      - "8000"
+        ports:
+          - "127.0.0.1:8000:8000"
     depends_on:
       postgres:
         condition: service_healthy
@@ -28,8 +29,8 @@ services:
 
   frontend:
     build: ./frontend
-    expose:
-      - "80"
+    ports:
+      - "127.0.0.1:8080:80"
     depends_on:
       - backend
     restart: unless-stopped
